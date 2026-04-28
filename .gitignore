@@ -1,0 +1,6 @@
+# xmake
+build/
+.xmake/
+
+# clang
+compile_commands.json

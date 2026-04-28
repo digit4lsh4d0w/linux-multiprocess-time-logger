@@ -1,0 +1,47 @@
+Language: C
+BasedOnStyle: LLVM
+
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+ColumnLimit: 80
+
+BreakBeforeBraces: Attach
+PointerAlignment: Left
+
+BinPackArguments: false
+BinPackParameters: false
+AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+
+AlignAfterOpenBracket: true
+BreakAfterOpenBracketFunction: true
+BreakBeforeCloseBracketFunction: true
+BreakAfterOpenBracketBracedList: true
+BreakBeforeCloseBracketBracedList: true
+
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortBlocksOnASingleLine: Empty
+AllowShortLambdasOnASingleLine: Empty
+
+BreakBeforeBinaryOperators: NonAssignment
+
+AlignTrailingComments: true
+
+SortIncludes:
+  Enabled: true
+  IgnoreCase: false
+
+IndentCaseLabels: true
+IndentCaseBlocks: true
+
+SpaceBeforeParens: ControlStatements
+SpaceAfterCStyleCast: true
+
+AlignConsecutiveAssignments:
+  Enabled: false
+AlignConsecutiveDeclarations:
+  Enabled: false
+
+KeepEmptyLinesAtTheStartOfBlocks: false

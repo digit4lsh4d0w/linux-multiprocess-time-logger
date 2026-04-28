@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://www.schemastore.org/clangd.json
+
+CompileFlags:
+  Add:
+    - "-std=c23"
+    - "-Wall"
+    - "-Wextra"
+    - "-Wpedantic"
+    - "-Wconversion"
+    - "-Wshadow"
+    - "-Wunreachable-code"
+    - "-Wvla"
+    - "-D_POSIX_C_SOURCE=200809L"
+    - "-D_DEFAULT_SOURCE"
+
+Diagnostics:
+  ClangTidy:
+    Add:
+      - "*"
+    Remove:
+      - "altera-*"
+      - "fuchsia-*"
+      - "google-*"
+      - "llvmlibc-*"
+
+Completion:
+  AllScopes: true
+  ArgumentLists: FullPlaceholders
+  HeaderInsertion: IWYU
+  CodePatterns: All
+  MacroFilter: FuzzyMatch
+
+InlayHints:
+  Enabled: true
+  BlockEnd: true
+  Designators: true
+  ParameterNames: true
+  DeducedTypes: true
+  DefaultArguments: true
+
+Documentation:
+  CommentFormat: "Markdown"
