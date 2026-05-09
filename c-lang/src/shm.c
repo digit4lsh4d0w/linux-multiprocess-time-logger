@@ -6,6 +6,8 @@
 #include <sys/mman.h>
 #include <unistd.h>
 
+const char* const SHM_NAME = "/time-logger";
+
 static SharedState* g_shared_state = nullptr;
 
 SharedState* shm_get_state() {
@@ -106,7 +108,7 @@ bool shm_init() {
         pthread_mutex_init(&g_shared_state->global_lock, &attr);
         pthread_mutexattr_destroy(&attr);
 
-        atomic_init(&g_shared_state->couter, 0);
+        atomic_init(&g_shared_state->counter, 0);
         atomic_init(&g_shared_state->leader_pid, 0);
         atomic_init(&g_shared_state->copy_1_pid, 0);
         atomic_init(&g_shared_state->copy_2_pid, 0);
