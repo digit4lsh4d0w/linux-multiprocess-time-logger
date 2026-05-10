@@ -1,6 +1,5 @@
 #include "time-logger/leader.h"
 #include "time-logger/shm.h"
-#include <asm-generic/errno-base.h>
 #include <errno.h>
 #include <signal.h>
 #include <stdatomic.h>
