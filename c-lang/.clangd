@@ -19,6 +19,7 @@ Diagnostics:
       - "*"
     Remove:
       - "altera-*"
+      - "android-*"
       - "fuchsia-*"
       - "google-*"
       - "llvmlibc-*"
